@@ -23,6 +23,37 @@
         <script src="js/sm-extend.js"></script>
         <!-- 自定义CSS -->
         <link rel="stylesheet" href="css/newcss.css">
+
+        <style>
+		div{
+			position: relative;
+		}
+		h1{font-size: 18px;
+			color: whitesmoke;
+			position:absolute;
+			top:12px;
+			left:160px;}
+
+        #hours_pic{
+            width: 420px;
+        }
+
+        #test-time{
+            top:-100px;
+        }
+
+        h2{font-size: 15px;
+			color: whitesmoke;
+			position:absolute;
+			top:65px;
+			left:180px;}
+        #word_last{
+            margin-top: -50px;
+            margin-left: 12px;
+            font-size: 12.15px;
+            /*font-family: 'Adobe 黑体 Std R';*/
+        }
+        </style>
     </head>
 
 </head>
@@ -35,44 +66,47 @@
                     <font  style="font-size: 18px; margin-left:137px; margin-right:100px; font-family: 'Adobe 黑体 Std R'; ">通行码领取</font>
                     <img src="more.png" align="right" style="width: 24px; ">
 
-                    <div align="center" style="margin-top: 40px; width: 70%;"><img  src="top_2.png"></div>
+                    <div align="center" style="margin-top: 40px;"><img style="width: 416px; margin-left: -10px; " src="top_2.png"></div>
           <center>
                     <div align="center" style="margin-top: 17px; font-size: 19px; font-family: 'blink'"><span id="username">童紫晗(学生)</span>通行码<span style="font-size: 14px;"></div>
                     <div align="center" style="margin-top: 17px; font-size: 17px; font-family: 'blink'">法学院</div>
 
                     <div id="start-time" align="center"; style="margin-top: 17px; font-weight: bolder; font-size: 26px; color: #efc12d; margin-bottom: 15px;  font-family: 'blink'">08-29 00:00:00</div>
-  <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/new-function.js"></script>
-        <script>
+                    <script type="text/javascript" src="js/index.js"></script>
+                    <script type="text/javascript" src="js/new-function.js"></script>
+
+                    <script>
             //s$.init();
 
-   // 获取当前分钟数(0-59)
-    function nowTimeSet(){
-            var now = new Date();
-            var month = now.getMonth()+1;
-            if(month<10){
-                month = "0" + month;
-            }
-            var date = now.getDate();
-            if(date<10){
-                date = "0" + date;
-            }
-            var hour = now.getHours();
-            if(hour<10){
-                hour = "0" + hour;
-            }
-            var minute = now.getMinutes();
-            if(minute<10){
-                minute = "0" + minute;
-            }
-            var second = now.getSeconds();
-            if(second<10){
-                second = "0" + second;
-            }
-            document.getElementById('start-time').innerHTML = month + '-' + date + ' ' +  hour + ':' + minute + ':' + second
-         }
-        setInterval(nowTimeSet,1000);
-        </script>
+                           // 获取当前分钟数(0-59)
+                            function nowTimeSet(){
+                                    var now = new Date();
+                                    var month = now.getMonth()+1;
+                                    if(month<10){
+                                        month = "0" + month;
+                                    }
+                                    var date = now.getDate();
+                                    if(date<10){
+                                        date = "0" + date;
+                                    }
+                                    var hour = now.getHours();
+                                    if(hour<10){
+                                        hour = "0" + hour;
+                                    }
+                                    var minute = now.getMinutes();
+                                    if(minute<10){
+                                        minute = "0" + minute;
+                                    }
+                                    var second = now.getSeconds();
+                                    if(second<10){
+                                        second = "0" + second;
+                                    }
+                                    document.getElementById('start-time').innerHTML = month + '-' + date + ' ' +  hour + ':' + minute + ':' + second
+                                 }
+                                setInterval(nowTimeSet,1000);
+                      </script>
+
+
 
                     <div align="center" style="margin-top: 25px; margin-bottom: 10px;"><img id="wcc-img-s" style="width: 250px; height: 250px;" src="qrcode.jpg"></div>
 <!--                    <div align="center"; style="margin-top: 0px; font-size: 18px; color: #54B803; font-family: 'Adobe 黑体 Std R'">提示: 已完成3剂次新冠疫苗接种</div>-->
@@ -84,14 +118,62 @@
                         <button type="button" style="background-color: #689bf4; width:80px; height:45px; margin-top: 40px; margin-left: 120px;  border-radius: 2px; border:none; font-size:14px; color: #f8f8f8; " onclick = "window.location.href = 'http://mryb.zjut.edu.cn/#/complexCode'">补打卡</button>
                     </div>
 
-                        <button type="button" style="background-color: #689bf4; width:60px; height:45px; margin-top: 40px;  margin-left: 10px; margin-bottom: 40px; border-radius: 2px; border:none; font-size:14px; color: #f8f8f8; " onclick = "window.location.href = 'http://mryb.zjut.edu.cn/#/complexCode'">申诉</button>
+                        <button type="button" style="background-color: #689bf4; width:60px; height:45px; margin-top: 40px;  margin-left: 10px; margin-bottom: 5px; border-radius: 2px; border:none; font-size:14px; color: #f8f8f8; " onclick = "window.location.href = 'http://mryb.zjut.edu.cn/#/complexCode'">申诉</button>
 
 
 
-                    <div style="margin-top: 0px; font-size: 12.15px; font-family: 'Adobe 黑体 Std R'; margin-left: 12px; ">凭蓝码可在学校朝晖校区、屏峰校区、莫干山校区范围内配合有效</div>
-                    <div style="margin-bottom: 10px; font-size: 12.15px; font-family: 'Adobe 黑体 Std R'; margin-left: 12px; ">证件通行，请主动出示，配合检查。</div>
 
-                    <div align="center"; style="background-color: #f8f8f8; width:446px; height:120px; margin-left: -10px; margin-top: 0px"></div>
+
+                    <div >
+                        <img id="hours_pic" style=" margin-left: -10px;" src="hours.jpg">
+                        <h1>核酸检测</h1>
+
+                       <div id="test-time" align="center"; style="margin-top: 17px;  font-size: 15px; color: whitesmoke;   font-family: 'blink'">08-29 00:00:00</div>
+                        <script type="text/javascript" src="js/index.js"></script>
+                        <script type="text/javascript" src="js/new-function.js"></script>
+                        <script>
+            //s$.init();
+
+                           // 获取当前分钟数(0-59)
+                            function nowTimeSet(){
+                                    var now = new Date();
+                                    var year= now.getFullYear();
+                                    var month = now.getMonth()+1;
+                                    if(month<10){
+                                        month = "0" + month;
+                                    }
+                                    var date = now.getDate();
+                                    if(date<10){
+                                        date = "0" + date;
+                                    }
+                                    var hour = now.getHours();
+                                    if(hour<10){
+                                        hour = "0" + hour;
+                                    }
+                                    var minute = now.getMinutes();
+                                    if(minute<10){
+                                        minute = "0" + minute;
+                                    }
+                                    var second = now.getSeconds();
+                                    if(second<10){
+                                        second = "0" + second;
+                                    }
+                                    document.getElementById('test-time').innerHTML = year + '-' + month + '-' + date + ' 11:06:32'
+                                 }
+                                setInterval(nowTimeSet,1000);
+                        </script>
+
+                        <h2>阴性</h2>
+                    </div>
+
+
+
+
+
+                    <div id="word_last">凭蓝码可在学校朝晖校区、屏峰校区、莫干山校区范围内配合有效证件通行，请主动出示，配合检查。</div>
+<!--                    <div style="margin-bottom: 10px; font-size: 12.15px; font-family: 'Adobe 黑体 Std R'; margin-left: 12px; ">证件通行，请主动出示，配合检查。</div>-->
+
+                    <div align="center"; style="background-color: #f8f8f8; width:446px; height:40px; margin-left: -10px; margin-top: 0px"></div>
 
 <div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
       <div class="xl-chrome-ext-bar__logo"></div>
